@@ -84,4 +84,4 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
 ```
 
 ### Load Test Comparison
-![alt text](images/chaos-memory-stress-comparison.png "Memory stress comparison")
+![alt text](images/chaos-memory-stress-summary.png "Memory stress comparison")
