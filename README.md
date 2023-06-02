@@ -57,6 +57,7 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
 }
 ```
 ### Load Test Comparison
+![alt text](images/chaos-cpu-stress-comparison.png "CPU stress comparison")
 
 ## Memory Stress
 
@@ -83,4 +84,4 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
 ```
 
 ### Load Test Comparison
-
+![alt text](images/chaos-memory-stress-comparison.png "Memory stress comparison")
