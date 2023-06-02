@@ -11,3 +11,15 @@ This uses a healthcare sample API and can be provisioned from [here]()
 
 ## General Chaos Mesh
 CPU and memory stress require the use of chaos mesh and so this has to be installed on the cluster.
+
+## CPU Stress
+
+Target all pods in the *health-check* namespace.
+```
+{"action":"stress","mode":"all","duration":"600s","stressors":{"cpu":{"workers":2,"load":90}},"selector":{"namespaces":["health-check"] }}}
+```
+
+Target a specific pod *humongous-healthcare-api* in the *health-check* namespace.
+```
+{"action":"stress","mode":"all","duration":"600s","stressors":{"cpu":{"workers":2,"load":90}},"selector":{"namespaces":["health-check"], "labelSelectors": { "app": "humongous-healthcare-api" }}}
+```
