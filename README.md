@@ -27,7 +27,24 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
 ## Memory Stress
 
 Target a specific pod *humongous-healthcare-api* in the *health-check* namespace.
-```
-{"action":"stress","mode":"all","duration":"600s","selector":{"namespaces":["health-check"],"labelSelectors":{"app":"humongous-healthcare-api"}},"stressors":{"memory":{"workers":4,"size":"256MB"}}}
+```{
+    "action": "stress",
+    "mode": "all",
+    "duration": "600s",
+    "selector": {
+        "namespaces": [
+            "health-check"
+        ],
+        "labelSelectors": {
+            "app": "humongous-healthcare-api"
+        }
+    },
+    "stressors": {
+        "memory": {
+            "workers": 4,
+            "size": "256MB"
+        }
+    }
+}
 ``
 
