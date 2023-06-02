@@ -7,10 +7,10 @@ This concentrates on stress at the pod or namespace level, not at the node pool 
 
 
 ## Sample Application
-This uses a healthcare sample API and can be provisioned from [here]()
+This uses a healthcare sample API and can be provisioned from [here](https://github.com/microsoft/winwithappplatpoc/tree/main/Humongous.Healthcare)
 
 ## General Chaos Mesh
-CPU and memory stress require the use of chaos mesh and so this has to be installed on the cluster.
+CPU and memory stress require the use of chaos mesh and so this has to be [installed](https://learn.microsoft.com/en-us/azure/chaos-studio/chaos-studio-tutorial-aks-portal#set-up-chaos-mesh-on-your-aks-cluster) on the cluster.
 
 ## CPU Stress
 
@@ -56,6 +56,7 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
     }
 }
 ```
+### Load Test Comparison
 
 ## Memory Stress
 
@@ -80,4 +81,6 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
     }
 }
 ```
+
+### Load Test Comparison
 
