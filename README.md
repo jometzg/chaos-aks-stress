@@ -16,12 +16,45 @@ CPU and memory stress require the use of chaos mesh and so this has to be instal
 
 Target all pods in the *health-check* namespace.
 ```
-{"action":"stress","mode":"all","duration":"600s","stressors":{"cpu":{"workers":2,"load":90}},"selector":{"namespaces":["health-check"] }}}
+{
+    "action": "stress",
+    "mode": "all",
+    "duration": "600s",
+    "stressors": {
+        "cpu": {
+            "workers": 2,
+            "load": 90
+        }
+    },
+    "selector": {
+        "namespaces": [
+            "health-check"
+        ]
+    }
+}
 ```
 
 Target a specific pod *humongous-healthcare-api* in the *health-check* namespace.
 ```
-{"action":"stress","mode":"all","duration":"600s","stressors":{"cpu":{"workers":2,"load":90}},"selector":{"namespaces":["health-check"], "labelSelectors": { "app": "humongous-healthcare-api" }}}
+{
+    "action": "stress",
+    "mode": "all",
+    "duration": "600s",
+    "stressors": {
+        "cpu": {
+            "workers": 2,
+            "load": 90
+        }
+    },
+    "selector": {
+        "namespaces": [
+            "health-check"
+        ],
+        "labelSelectors": {
+            "app": "humongous-healthcare-api"
+        }
+    }
+}
 ```
 
 ## Memory Stress
@@ -46,5 +79,5 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
         }
     }
 }
-``
+```
 
