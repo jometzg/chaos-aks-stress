@@ -3,7 +3,7 @@ Chaos studio can use chaos mesh on AKS to apply CPU and memory stressors to an e
 
 This repository shows how to make this work with a test workload on AKS.
 
-This concentrates on stress at the pod or namespace level, not at the node pool level. There is a different set of Chaos Studio faults that target the AKS node pools specifically.
+The first half concentrates on stress at the pod or namespace level. The second half is on stress at the node pool level.
 
 
 ## Sample Application
@@ -85,3 +85,19 @@ Target a specific pod *humongous-healthcare-api* in the *health-check* namespace
 
 ### Load Test Comparison
 ![alt text](images/chaos-memory-stress-summary.png "Memory stress comparison")
+
+
+## Node Pool Chaos Stress
+The previous stress tests targetted either an AKS pod or pods in a specific namespace - this is controlled by chaos mesh. You can also run CPU and memory stress on node pools.
+For this to work, you need to enable chaos on the node pool VMSS.
+
+### Configuration
+
+### Making sure that the agent installs onto the Node Pool
+
+### CPU Stress
+
+### Results
+
+
+## Conclusion
